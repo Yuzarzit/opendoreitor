@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>opendoreitor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="toolbar">
+  <div class="row">
+    <button id="back"    class="icon" title="Atras">&#8592;</button>
+    <button id="fwd"     class="icon" title="Adelante">&#8594;</button>
+    <button id="reload"  class="icon" title="Recargar">&#8635;</button>
+    <button id="home"    class="icon" title="Inicio">&#8962;</button>
+
+    <input id="url" type="text" spellcheck="false" autocomplete="off"
+           placeholder="Busca o escribe una URL...">
+
+    <button id="star"    class="icon" title="Marcar">&#9734;</button>
+    <button id="go"      class="go">Buscar</button>
+  </div>
+
+  <div class="row small">
+    <button id="menu" class="icon" title="Menu">&#9776;</button>
+
+    <div id="panel" class="hidden">
+      <button data-cmd="theme"    id="btnTheme">Tema oscuro</button>
+      <button data-cmd="eco"      id="btnEco">Modo eco: off</button>
+      <button data-cmd="adblock"  id="btnAdblock">Adblock: on</button>
+      <button data-cmd="hist"     id="btnHist">Historial</button>
+      <button data-cmd="marks"    id="btnMarks">Marcadores</button>
+      <button data-cmd="clear"    id="btnClear">Borrar datos</button>
+    </div>
+  </div>
+</header>
+
+<aside id="drawer" class="hidden">
+  <div class="drawer-head">
+    <h2 id="drawerTitle">Historial</h2>
+    <button id="drawerClose" class="icon">&#10005;</button>
+  </div>
+  <ul id="drawerList"></ul>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

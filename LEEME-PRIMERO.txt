@@ -1,0 +1,20 @@
+OPENDOREITOR - como conseguir el .exe (elige UNA opcion)
+
+OPCION A - En tu PC (doble clic)
+  1. Extrae el zip completo (clic derecho > Extraer todo).
+  2. Doble clic en compilar.bat y acepta los avisos de administrador.
+  3. El .exe aparece en el Escritorio (15-25 min la primera vez).
+
+OPCION B - En la nube desde el navegador (no instala nada en tu PC)
+  1. github.com > + > New repository > nombre "opendoreitor" > Private > Create.
+  2. Pulsa "uploading an existing file".
+  3. Entra DENTRO de la carpeta extraida, Ctrl+A, arrastra todo al navegador.
+     (comprueba que aparece .github/workflows/build.yml)
+  4. Commit changes. La compilacion arranca sola.
+  5. Pestana Actions: espera el check verde (10-15 min).
+  6. Pagina principal > Releases > opendoreitor.exe
+
+Si algo falla, pega el error en el chat (compilar.bat lo copia solo al portapapeles;
+en GitHub aparece resumido en la pagina de la ejecucion).
+
+Mas detalles en README.md

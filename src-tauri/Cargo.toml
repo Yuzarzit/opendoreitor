@@ -1,0 +1,26 @@
+[package]
+name = "opendoreitor"
+version = "0.1.0"
+description = "Navegador ligero hecho en Tauri v2"
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# "unstable" es obligatorio: habilita WindowBuilder y Window::add_child (multiwebview)
+tauri = { version = "2", features = ["unstable"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+# Lo activa la CLI en las compilaciones de produccion. NO BORRAR.
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
